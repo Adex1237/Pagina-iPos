@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS Pro - Panel de Control Gerente</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="pantallaGerente.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="topbar-left">
+            <div class="brand">
+                <i class="fa-solid fa-shop brand-icon"></i>
+                <span class="brand-name">POS Pro</span>
+            </div>
+            <div class="user-role-badge">
+                <i class="fa-solid fa-shield-halved"></i> Gerente
+            </div>
+        </div>
+        <div class="topbar-right">
+            <span class="current-time" id="txtReloj">--:-- --</span>
+            
+            <div class="user-profile" id="btnPerfil">
+                <span class="avatar-initials">RS</span>
+                <span class="user-name">Roberto</span>
+                <i class="fa-solid fa-chevron-down arrow-icon"></i>
+
+                <div class="dropdown-menu" id="menuDesplegable">
+                    <a href="#" class="dropdown-item btn-logout" id="btnCerrarSesion">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar sesión
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-item active" data-target="seccion-dashboard">
+                    <i class="fa-solid fa-chart-simple"></i> Dashboard
+                </a>
+                <a href="#" class="menu-item" data-target="seccion-roles">
+                    <i class="fa-solid fa-gear"></i> Roles
+                </a>
+                <a href="#" class="menu-item" data-target="seccion-productos">
+                    <i class="fa-solid fa-box"></i> Productos
+                </a>
+                <a href="#" class="menu-item" data-target="seccion-clientes">
+                    <i class="fa-solid fa-users"></i> Clientes
+                </a>
+                <a href="#" class="menu-item" data-target="seccion-det-venta">
+                    <i class="fa-solid fa-chart-line"></i> Det. Venta
+                </a>
+            </nav>
+        </aside>
+
+        <main class="content-area">
+            
+            <section id="seccion-dashboard" class="main-section active">
+                <div class="table-container">
+                    <h2 class="table-section-title">Ventas recientes</h2>
+                    <div class="responsive-table">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Cliente</th>
+                                    <th>Empleado</th>
+                                    <th>Total</th>
+                                    <th>Fecha</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-bold text-dark">#4516</td>
+                                    <td>Público General</td>
+                                    <td>Carlos Ramírez</td>
+                                    <td class="text-bold text-dark">$156.00</td>
+                                    <td class="text-muted">2025-06-15 10:10</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bold text-dark">#4517</td>
+                                    <td>Laura Martínez</td>
+                                    <td>Ana Torres</td>
+                                    <td class="text-bold text-dark">$289.00</td>
+                                    <td class="text-muted">2025-06-15 10:18</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bold text-dark">#4518</td>
+                                    <td>Público General</td>
+                                    <td>Carlos Ramírez</td>
+                                    <td class="text-bold text-dark">$46.50</td>
+                                    <td class="text-muted">2025-06-15 10:25</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="seccion-roles" class="main-section">
+                <div class="section-header">
+                    <div class="section-title-container">
+                        <h1 class="main-section-title">Roles</h1>
+                        <span class="section-subtitle">4 roles registrados</span>
+                    </div>
+                    <button class="btn-primary">
+                        <i class="fa-solid fa-plus"></i> Nuevo rol
+                    </button>
+                </div>
+
+                <div class="table-container">
+                    <div class="responsive-table">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 80px;">ID</th>
+                                    <th style="width: 250px;">Nombre</th>
+                                    <th>Descripción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-muted">1</td>
+                                    <td class="text-bold text-dark">Gerente</td>
+                                    <td>Acceso total al sistema</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">2</td>
+                                    <td class="text-bold text-dark">Cajero</td>
+                                    <td>Gestión de ventas y cobros</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">3</td>
+                                    <td class="text-bold text-dark">Almacenista</td>
+                                    <td>Control de inventario y almacén</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">4</td>
+                                    <td class="text-bold text-dark">Cliente</td>
+                                    <td>Consulta de catálogo y servicios</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="seccion-productos" class="main-section">
+                <div class="section-header">
+                    <div class="section-title-container">
+                        <h1 class="main-section-title">Productos</h1>
+                        <span class="section-subtitle">15 productos registrados</span>
+                    </div>
+                    <button class="btn-primary">
+                        <i class="fa-solid fa-plus"></i> Nuevo producto
+                    </button>
+                </div>
+
+                <div class="table-container">
+                    <div class="responsive-table">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 60px;">ID</th>
+                                    <th>Nombre</th>
+                                    <th>Categoría</th>
+                                    <th>Precio</th>
+                                    <th style="width: 100px;">Stock</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-muted">1</td>
+                                    <td class="text-bold text-dark">Coca Cola 600ml</td>
+                                    <td>Bebidas</td>
+                                    <td class="text-bold text-dark">$25.00</td>
+                                    <td><span class="badge badge-success">48</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">2</td>
+                                    <td class="text-bold text-dark">Agua Natural 1L</td>
+                                    <td>Bebidas</td>
+                                    <td class="text-bold text-dark">$18.50</td>
+                                    <td><span class="badge badge-success">120</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">3</td>
+                                    <td class="text-bold text-dark">Jugo de Naranja 1L</td>
+                                    <td>Bebidas</td>
+                                    <td class="text-bold text-dark">$38.00</td>
+                                    <td><span class="badge badge-success">30</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">4</td>
+                                    <td class="text-bold text-dark">Leche Entera 1L</td>
+                                    <td>Lácteos</td>
+                                    <td class="text-bold text-dark">$28.00</td>
+                                    <td><span class="badge badge-success">32</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">5</td>
+                                    <td class="text-bold text-dark">Yogur Natural 250g</td>
+                                    <td>Lácteos</td>
+                                    <td class="text-bold text-dark">$22.00</td>
+                                    <td><span class="badge badge-success">25</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">6</td>
+                                    <td class="text-bold text-dark">Queso Oaxaca 400g</td>
+                                    <td>Lácteos</td>
+                                    <td class="text-bold text-dark">$85.00</td>
+                                    <td><span class="badge badge-warning">12</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">7</td>
+                                    <td class="text-bold text-dark">Pan Integral</td>
+                                    <td>Panadería</td>
+                                    <td class="text-bold text-dark">$42.00</td>
+                                    <td><span class="badge badge-warning">15</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">8</td>
+                                    <td class="text-bold text-dark">Pan de Caja Blanco</td>
+                                    <td>Panadería</td>
+                                    <td class="text-bold text-dark">$38.00</td>
+                                    <td><span class="badge badge-success">20</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">9</td>
+                                    <td class="text-bold text-dark">Manzana Roja kg</td>
+                                    <td>Frutas y Verduras</td>
+                                    <td class="text-bold text-dark">$35.00</td>
+                                    <td><span class="badge badge-success">60</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="seccion-clientes" class="main-section">
+                <div class="section-header">
+                    <div class="section-title-container">
+                        <h1 class="main-section-title">Clientes</h1>
+                        <span class="section-subtitle">6 clientes registrados</span>
+                    </div>
+                    <button class="btn-primary">
+                        <i class="fa-solid fa-plus"></i> Nuevo cliente
+                    </button>
+                </div>
+
+                <div class="table-container">
+                    <div class="responsive-table">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 80px;">ID</th>
+                                    <th>Nombre</th>
+                                    <th>Teléfono</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-muted">1</td>
+                                    <td class="text-bold text-dark">Laura Martínez</td>
+                                    <td>555-1234</td>
+                                    <td>laura.m@email.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">2</td>
+                                    <td class="text-bold text-dark">Jorge Hernández</td>
+                                    <td>555-5678</td>
+                                    <td>jorge.h@email.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">3</td>
+                                    <td class="text-bold text-dark">Carmen Vega</td>
+                                    <td>555-9012</td>
+                                    <td>carmen.v@email.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">4</td>
+                                    <td class="text-bold text-dark">Miguel Ríos</td>
+                                    <td>555-3456</td>
+                                    <td>miguel.r@email.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">5</td>
+                                    <td class="text-bold text-dark">Patricia Luna</td>
+                                    <td>555-7890</td>
+                                    <td>patricia.l@email.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">6</td>
+                                    <td class="text-bold text-dark">Público General</td>
+                                    <td class="text-muted">N/A</td>
+                                    <td class="text-muted">N/A</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="seccion-det-venta" class="main-section">
+                <div class="section-header">
+                    <div class="section-title-container">
+                        <h1 class="main-section-title">Detalle de venta</h1>
+                        <span class="section-subtitle">12 líneas de venta</span>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <div class="responsive-table">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 60px;">ID</th>
+                                    <th>Venta</th>
+                                    <th>Producto</th>
+                                    <th style="width: 100px;">Cantidad</th>
+                                    <th>Precio unit.</th>
+                                    <th>Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-muted">1</td>
+                                    <td class="text-bold text-dark">#4516</td>
+                                    <td>Arroz 1kg</td>
+                                    <td>2</td>
+                                    <td>$32.00</td>
+                                    <td class="text-bold text-dark">$64.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">2</td>
+                                    <td class="text-bold text-dark">#4516</td>
+                                    <td>Frijol Negro 1kg</td>
+                                    <td>1</td>
+                                    <td>$38.00</td>
+                                    <td class="text-bold text-dark">$38.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">3</td>
+                                    <td class="text-bold text-dark">#4516</td>
+                                    <td>Aceite Vegetal 1L</td>
+                                    <td>1</td>
+                                    <td>$55.00</td>
+                                    <td class="text-bold text-dark">$55.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">4</td>
+                                    <td class="text-bold text-dark">#4517</td>
+                                    <td>Coca Cola 600ml</td>
+                                    <td>4</td>
+                                    <td>$25.00</td>
+                                    <td class="text-bold text-dark">$100.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">5</td>
+                                    <td class="text-bold text-dark">#4517</td>
+                                    <td>Leche Entera 1L</td>
+                                    <td>2</td>
+                                    <td>$28.00</td>
+                                    <td class="text-bold text-dark">$56.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">6</td>
+                                    <td class="text-bold text-dark">#4517</td>
+                                    <td>Manzana Roja kg</td>
+                                    <td>3</td>
+                                    <td>$35.00</td>
+                                    <td class="text-bold text-dark">$105.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">7</td>
+                                    <td class="text-bold text-dark">#4518</td>
+                                    <td>Agua Natural 1L</td>
+                                    <td>1</td>
+                                    <td>$18.50</td>
+                                    <td class="text-bold text-dark">$18.50</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">8</td>
+                                    <td class="text-bold text-dark">#4518</td>
+                                    <td>Pan Integral</td>
+                                    <td>1</td>
+                                    <td>$42.00</td>
+                                    <td class="text-bold text-dark">$42.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">9</td>
+                                    <td class="text-bold text-dark">#4519</td>
+                                    <td>Queso Oaxaca 400g</td>
+                                    <td>2</td>
+                                    <td>$85.00</td>
+                                    <td class="text-bold text-dark">$170.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">10</td>
+                                    <td class="text-bold text-dark">#4519</td>
+                                    <td>Coca Cola 600ml</td>
+                                    <td>6</td>
+                                    <td>$25.00</td>
+                                    <td class="text-bold text-dark">$150.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="pantallaGerente.js"></script>
+</body>
+</html>
