@@ -1,0 +1,192 @@
+/* RESET DE ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a2c4c; /* Fondo azul oscuro del mockup */
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 85vh;
+}
+
+/* ENCABEZADO */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.logo-box {
+    background-color: #f97316; /* Color naranja de la app */
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+}
+
+.logo-text {
+    text-align: left;
+}
+
+.system-subtitle {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #94a3b8;
+    display: block;
+    line-height: 1;
+}
+
+.system-title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.current-date {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 35px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #94a3b8;
+}
+
+/* CUADRÍCULA DE TARJETAS (RESPONSIVA) */
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 850px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* TARJETA DE PERFIL */
+.profile-card {
+    background-color: #20355a; /* Color de la tarjeta ligeramente más claro */
+    border: 1px solid #2e4775;
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alineado a la izquierda como el mockup */
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto hover suave al pasar el mouse */
+.profile-card:hover {
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* AVATARES E INICIALES */
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.avatar-orange { background-color: #f97316; color: white; }
+.avatar-grey { background-color: #475569; color: white; }
+.avatar-blue { background-color: #2563eb; color: white; }
+
+/* TEXTOS DE LA TARJETA */
+.profile-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.profile-role {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.profile-shift {
+    font-size: 13px;
+}
+
+.text-muted {
+    color: #64748b;
+}
+
+.text-orange {
+    color: #f97316;
+}
+
+/* PIE DE PÁGINA */
+.footer {
+    font-size: 13px;
+    color: #475569;
+    text-align: center;
+}
+
+/* BOTÓN DE AYUDA */
+.help-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #20355a;
+    border: 1px solid #334155;
+    border-radius: 50%;
+    color: #94a3b8;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.help-btn:hover {
+    background-color: #334155;
+    color: white;
+}
