@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS Pro - Catálogo de Productos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="pantallaCliente.css">
+</head>
+<body>
+
+    <header class="topbar-client">
+        <div class="topbar-left">
+            <div class="brand">
+                <i class="fa-solid fa-shop brand-icon"></i>
+                <span class="brand-name">POS Pro</span>
+            </div>
+            <div class="user-role-badge">
+                <i class="fa-solid fa-user"></i> Cliente
+            </div>
+        </div>
+        <div class="topbar-right">
+            <span class="current-time" id="txtReloj">--:-- --</span>
+            
+            <div class="user-profile" id="btnPerfil">
+                <span class="avatar-initials">LM</span>
+                <span class="user-name">Laura</span>
+                <i class="fa-solid fa-chevron-down arrow-icon"></i>
+
+                <div class="dropdown-menu" id="menuDesplegable">
+                    <a href="#" class="dropdown-item btn-logout" id="btnCerrarSesion">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar sesión
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="subtitle-context">TIENDA EN LÍNEA</span>
+            <h1 class="hero-title">Catálogo de productos</h1>
+            <p class="hero-description">Encuentra todos nuestros productos disponibles</p>
+            
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Buscar producto o descripción..." class="search-input">
+            </div>
+
+            <div class="submenu-toggle-container">
+                <button class="toggle-btn active">Productos</button>
+                <button class="toggle-btn">Servicios</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="catalog-container">
+        
+        <div class="categories-filter">
+            <button class="filter-pill active">Todos</button>
+            <button class="filter-pill"><i class="fa-solid fa-glass-water"></i> Bebidas</button>
+            <button class="filter-pill"><i class="fa-solid fa-glass-water"></i> Lácteos</button>
+            <button class="filter-pill"><i class="fa-solid fa-bread-slice"></i> Panadería</button>
+            <button class="filter-pill"><i class="fa-solid fa-apple-whole"></i> Frutas y Verduras</button>
+            <button class="filter-pill"><i class="fa-solid fa-basket-shopping"></i> Abarrotes</button>
+        </div>
+
+        <span class="products-count">14 productos</span>
+
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <div class="product-image-box">
+                    <i class="fa-solid fa-glass-water placeholder-prod-icon"></i>
+                </div>
+                <div class="product-info">
+                    <span class="prod-category">Bebidas</span>
+                    <h3 class="prod-title">Coca Cola 600ml</h3>
+                    <p class="prod-desc">Refresco de cola</p>
+                    <div class="prod-footer">
+                        <span class="prod-price">$25.00</span>
+                        <span class="stock-badge">Disponible</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-box">
+                    <i class="fa-solid fa-glass-water placeholder-prod-icon"></i>
+                </div>
+                <div class="product-info">
+                    <span class="prod-category">Bebidas</span>
+                    <h3 class="prod-title">Agua Natural 1L</h3>
+                    <p class="prod-desc">Agua purificada</p>
+                    <div class="prod-footer">
+                        <span class="prod-price">$18.50</span>
+                        <span class="stock-badge">Disponible</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-box">
+                    <i class="fa-solid fa-glass-water placeholder-prod-icon"></i>
+                </div>
+                <div class="product-info">
+                    <span class="prod-category">Bebidas</span>
+                    <h3 class="prod-title">Jugo de Naranja 1L</h3>
+                    <p class="prod-desc">Jugo natural</p>
+                    <div class="prod-footer">
+                        <span class="prod-price">$38.00</span>
+                        <span class="stock-badge">Disponible</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-box">
+                    <i class="fa-solid fa-glass-water placeholder-prod-icon"></i>
+                </div>
+                <div class="product-info">
+                    <span class="prod-category">Lácteos</span>
+                    <h3 class="prod-title">Leche Entera 1L</h3>
+                    <p class="prod-desc">Leche pasteurizada</p>
+                    <div class="prod-footer">
+                        <span class="prod-price">$28.00</span>
+                        <span class="stock-badge">Disponible</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="pantallaGerente.js"></script>
+</body>
+</html>
